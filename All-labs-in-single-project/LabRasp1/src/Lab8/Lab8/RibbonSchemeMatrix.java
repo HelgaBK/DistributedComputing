@@ -4,7 +4,7 @@ import mpi.MPI;
 
 //--------------------------Стрічкова схема--------------------------//
 
-public class StringMatrix {
+public class RibbonSchemeMatrix {
     public static void determine(String[] args, int matrixSize) {
         MPI.Init(args);
         int procRank = MPI.COMM_WORLD.Rank();

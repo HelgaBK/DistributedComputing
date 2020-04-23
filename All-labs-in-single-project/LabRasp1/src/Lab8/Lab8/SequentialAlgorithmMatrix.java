@@ -4,7 +4,7 @@ import mpi.MPI;
 
 //--------------------------Послідовний алгоритм--------------------------//
 
-public class SimpleMatrix {
+public class SequentialAlgorithmMatrix {
     public static void determine(String[] args, int matrixSize) {
 
         MPI.Init(args);
