@@ -5,7 +5,7 @@ import mpi.MPI;
 
 import java.util.Arrays;
 
-//--------------------------Метод Канона--------------------------//
+//--------------------------Метод Кенона--------------------------//
 public class CannonMatrix {
     private static int[] gridCoords = new int[2];
     private static Cartcomm ColComm;
