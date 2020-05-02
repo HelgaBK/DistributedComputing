@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="airport" type="airportType"/>
+  <xs:complexType name="flightType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute  name="code" use="required" >
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:maxInclusive value="120"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute type="xs:string" name="from" use="required"/>
+        <xs:attribute type="xs:string" name="to" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="aircompanyType">
+    <xs:sequence>
+      <xs:element type="flightType" name="flight" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="code" use="required"/>
+    <xs:attribute type="xs:string" name="name" use="required"/>
+  </xs:complexType>
+  <xs:complexType name="airportType">
+    <xs:sequence>
+      <xs:element type="aircompanyType" name="aircompany" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
