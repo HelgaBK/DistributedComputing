@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><airport><aircompany code="12" name="airlines"><flight code="123" from="Kiev" to="New York"/><flight code="124" from="Kiev" to="Paris"/></aircompany><aircompany code="11" name="fedex"><flight code="222" from="Kiev" to="Rivne"/><flight code="228" from="Kiev" to="LA"/></aircompany></airport>
